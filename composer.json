@@ -1,0 +1,51 @@
+{
+    "name": "gastier/phpstan-todo-comment",
+    "license": "MIT",
+    "type": "phpstan-extension",
+    "keywords": [
+        "dev",
+        "phpstan",
+        "phpstan-extension",
+        "static analysis",
+        "comments",
+        "todo"
+    ],
+    "version": "0.0.1",
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "nikic/php-parser": "^5.1",
+        "phpstan/phpstan": "^1.11"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9 || ^10.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "gastier\\PhpstanTodoComment\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "phpstan": {
+            "includes": [
+                "extension.neon"
+            ]
+        }
+    },
+    "scripts": {
+        "phpstan": "phpstan --ansi",
+        "test": "phpunit --testdox tests/"
+    }
+}

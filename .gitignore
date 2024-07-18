@@ -1,0 +1,4 @@
+vendor/
+
+Dockerfile
+compose.yml

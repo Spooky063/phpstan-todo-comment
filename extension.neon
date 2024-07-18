@@ -1,0 +1,7 @@
+includes:
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+
+services:
+    -
+        class: gastier\PhpstanTodoComment\TodoCommentRule
+        tags: [phpstan.rules.rule]
